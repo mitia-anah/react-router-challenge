@@ -1,15 +1,30 @@
 import React from 'react';
+import { Switch, Route, Link } from 'react-router-dom'
+
 
 import Home from './Home';
 import Products from './Products';
+import ProductDetail from './ProductDetail'
 
 function App() {
 	return (
-		<div>
+		<div className='App'>
 			<nav>
-				<a>Home</a>
-				<a>Products</a>
+				<Link to='/'>Home</Link>
+				<Link to='/products'>Products</Link>
 			</nav>
+			<Switch>
+				<Route exact path='/'>
+					<Home />
+				</Route>
+				<Route exact path="/products">
+					<Products />
+				</Route>
+				<Route path="/products/:id">
+					<ProductDetail></ProductDetail>
+				</Route>
+			</Switch>
+
 			{/*
                 Route between 2 components depending on the path:
                 1. Home page ("/")

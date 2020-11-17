@@ -1,0 +1,14 @@
+.App {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+.product__card {
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: azure;
+    box-shadow: 5px 5px 5px 5px rgb();
+}
+li {
+    list-style: none;
+}
